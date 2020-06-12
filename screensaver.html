@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <title>Screen Saver</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8" />
+	</head>
+	<body>
+		<script>
+			var spot = {
+  x: 100,
+  y: 50
+};
+
+var col = {
+  r: 255,
+  g: 0,
+  b: 0
+};
+function setup() {
+  createCanvas(500, 500);
+  background(0);
+}
+
+function draw() {
+  col.r = random(100, 255);
+  col.g = 0;
+  col.b = random(100, 190);
+
+  spot.x = random(0, width);
+  spot.y = random(0, height);
+  noStroke();
+  fill(col.r, col.g, col.b, 100);
+  ellipse(spot.x, spot.y, 24, 24);
+}
+
+		</script>
+	</body>
+</html>
